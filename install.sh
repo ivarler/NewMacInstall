@@ -6,9 +6,9 @@ echo "Installing Homebrew..."
 echo "Installing Homebrew Cask..."
 brew tap caskroom/cask
 
-#######
-# Dev #
-#######
+#############
+# Dev-tools #
+#############
 
 brew install node
 brew install git
@@ -31,6 +31,9 @@ brew cask install skype-for-business
 
 ## Music
 brew cask install spotify
+
+## File storage
+brew cask install dropbox
 
 ## VM
 brew cask install parallels-desktop

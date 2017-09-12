@@ -1,0 +1,142 @@
+{
+    // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    
+    "Act": {
+        "prefix": "act",
+        "body": [
+            "function act(c){",
+                "\t$0",
+                "",
+                "\tc.sut.${1:function}(${2:arguments});",
+            "}"
+        ],
+        "description": "None"
+    },
+    "Assert": {
+        "prefix": "ita",
+        "body": [
+            ".it('should $2').assert${3}(${4:args})",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "Assert does not throw": {
+        "prefix": "itd",
+        "body": [
+            ".it('should $2').assertDoesNotThrow(c.${3:instance}.${4:function}.verify)",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "Assert equal": {
+        "prefix": "ite",
+        "body": [
+            ".it('should $1').assertEqual(c.${2:expected}, c.${3:returned})",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "Class": {
+        "prefix": "class",
+        "body": [
+            "function ${1:className}() {",
+                "\tvar c = {};",
+                "\t$0",
+                "",
+                "\treturn c;",    
+            "}",
+            "",
+            "module.exports = $1;"
+        ],
+        "description": "None"
+    },
+    "Expect require": {
+        "prefix": "er",
+        "body": [
+            "c.${1:dependency} = {};",
+            "c.expectRequire('$1').return(c.$1);",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "Library mock": {
+        "prefix": "lm",
+        "body": [
+            "c.$4 = c.mock();",
+            "c.${1:mock}.${2:function} = c.mock();",
+            "c.${1:mock}.${2:function}.expect($3).return(c.$4);",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "Mocking": {
+        "prefix": "mock",
+        "body": [
+            "c.${1:mock}.${2:function} = c.mock();",
+            "c.${1:mock}.${2:function}.expect($3)${4:.return($5)};",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "New Act": {
+        "prefix": "newact",
+        "body": [
+            "var a = require('a');",
+
+            "function act(c){",
+                "\tc.mock = a.mock;",
+                "\tc.requireMock = a.requireMock;",
+                "\tc.expectRequire = a.expectRequire;",
+                "\tc.then = a.then;",
+                "\t$0",
+                "",
+                "\tc.sut = require('../${1:class}')(${2:arguments});",
+            "}",
+            
+            "module.exports = act;"
+        ],
+        "description": "None"
+    },
+    "Public function": {
+        "prefix": "pf",
+        "body": [
+            "c.${1:function_name} = function(${2:arguments}){",
+                "\t$0",
+            "};"
+        ],
+        "description": "None"
+    },
+    "Require Mock": {
+        "prefix": "rm",
+        "body": [
+            "c.${1:dep} = c.requireMock('./${2:path}');",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "Require Mock Instance": {
+        "prefix": "rrm",
+        "body": [
+            "c.${1:dep} = c.mock();",
+            "c.new${1}  = c.requireMock('./${2:path}');",
+            "c.new${1}.expect(${3:arguments}).return(c.${1:dep});",
+            "$0"
+        ],
+        "description": "None"
+    },
+    "When": {
+        "prefix": "when",
+        "body": [
+            "var when = require('a').when;",
+            "var c = {};",
+            "",
+            "when(c)",
+            "$0"
+        ],
+        "description": "None"
+    }
+}
