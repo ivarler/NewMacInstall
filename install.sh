@@ -27,7 +27,6 @@ brew cask install google-chrome
 
 ## Communication
 brew cask install slack
-brew cask install skype-for-business
 
 ## Music
 brew cask install spotify
