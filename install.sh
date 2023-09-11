@@ -34,6 +34,7 @@ brew cask install spotify
 #brew cask install dropbox
 
 ## VM
+brew cask install citrix-workspace
 brew cask install parallels-desktop
 brew cask install vagrant
 brew cask install docker
