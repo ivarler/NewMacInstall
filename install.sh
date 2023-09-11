@@ -10,8 +10,7 @@ brew tap caskroom/cask
 # Dev-tools #
 #############
 
-brew install node
-brew install git
+brew install nvm
 brew install zsh zsh-completions
 
 ################
@@ -23,16 +22,16 @@ brew cask install iterm2
 brew cask install visual-studio-code
 
 ## Web
-brew cask install google-chrome
+#brew cask install google-chrome
 
 ## Communication
-brew cask install slack
+brew cask install microsoft-teams
 
 ## Music
 brew cask install spotify
 
 ## File storage
-brew cask install dropbox
+#brew cask install dropbox
 
 ## VM
 brew cask install parallels-desktop
